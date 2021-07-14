@@ -5,6 +5,7 @@ import { MessageState } from './types';
 const initialState: MessageState = {
   message: 'Messagem inicial',
   loading: false,
+  cepInfo: null,
 };
 
 const messageSlice = createSlice({
@@ -17,8 +18,11 @@ const messageSlice = createSlice({
     cepInfos(state = initialState) {
       state.loading = true;
     },
+    setCepInfos(state = initialState, action: PayloadAction<string>) {
+      state.cepInfo = action.payload;
+    },
   },
 });
 
-export const { setMessage, cepInfos } = messageSlice.actions;
+export const { setMessage, cepInfos, setCepInfos } = messageSlice.actions;
 export default messageSlice.reducer;

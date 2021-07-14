@@ -8,7 +8,9 @@ import { ApplicationState } from '../../store/rootReducer/storeConfig';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
-  const { message } = useSelector((state: ApplicationState) => state.message);
+  const { message, cepInfo } = useSelector(
+    (state: ApplicationState) => state.message,
+  );
 
   const handlePress = () => {
     dispatch(setMessage('Message from Component'));
@@ -19,6 +21,8 @@ const Home: React.FC = () => {
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>{message}</Text>
       <Button title="Set Message" onPress={handlePress} />
+
+      <Text>dados do cep: {cepInfo?.bairro || 'n/d'}</Text>
       <Button title="get cep info" onPress={handlePress} />
     </View>
   );

@@ -1,6 +1,7 @@
 import { call, put } from 'redux-saga/effects';
 
 import GetCepInfo from '../../services/location';
+import { setCepInfos } from './index';
 
 interface CepInfosType {
   bairro: string;
@@ -13,8 +14,8 @@ interface CepInfosType {
 export function* getCepInfos() {
   try {
     const response: CepInfosType = yield call(GetCepInfo, '12220281');
-    console.log('response -->', response.bairro);
-    // yield put(accessTokenSuccess(access_token));
+
+    yield put(setCepInfos(response));
   } catch (error) {
     // yield put(requestFailure());
   }
