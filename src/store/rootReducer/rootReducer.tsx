@@ -1,14 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers } from '@reduxjs/toolkit';
 
-import messageReducer from '../Message';
-import { MessageState } from '../Message/types';
+import message from '../Message';
+import { ApplicationState } from './storeConfig';
 
-export interface ApplicationState {
-  message: MessageState;
-}
-
-export const store = configureStore({
-  reducer: {
-    message: messageReducer,
-  },
+const combinedReducer = combineReducers<ApplicationState>({
+  message,
 });
+
+const rootReducer = (state: ApplicationState, action: any) => {
+  return combinedReducer(state, action);
+};
+
+export default rootReducer;

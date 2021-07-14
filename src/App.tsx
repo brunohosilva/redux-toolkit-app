@@ -1,13 +1,14 @@
-import React from "react";
+import React from 'react';
 
-import Home from "./view/Home";
-import { Provider } from "react-redux";
-import { store } from "./store/rootReducer/rootReducer";
+import { Provider } from 'react-redux';
+
+import { AppStore } from './store/rootReducer/storeConfig';
+import Home from './view/Home';
 
 const App = () => {
   return (
     <>
-      <Provider store={store}>
+      <Provider store={AppStore}>
         <Home />
       </Provider>
     </>
