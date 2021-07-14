@@ -1,0 +1,1 @@
+{ '*.{ts,tsx}': 'eslint --ext .js,.jsx,.ts,.tsx' }
