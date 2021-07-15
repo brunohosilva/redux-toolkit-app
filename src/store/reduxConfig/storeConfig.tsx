@@ -2,7 +2,7 @@ import { applyMiddleware, createStore, Store } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 
-import { CepState } from '../Cep/types';
+import { CepState } from '../cep/types';
 import rootSaga from '../rootSaga';
 import { persitorConfig } from './persistorConfig';
 import rootReducer from './rootReducer';

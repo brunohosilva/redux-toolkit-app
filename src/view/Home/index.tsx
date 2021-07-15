@@ -3,7 +3,7 @@ import { View, Text, Button } from 'react-native';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { cepInfos } from '../../store/Cep';
+import { cepInfos } from '../../store/cep';
 import { ApplicationState } from '../../store/reduxConfig/storeConfig';
 
 const Home: React.FC = () => {

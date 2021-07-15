@@ -1,6 +1,6 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import cep from '../Cep';
+import cep from '../cep';
 import { ApplicationState } from './storeConfig';
 
 const combinedReducer = combineReducers<ApplicationState>({
