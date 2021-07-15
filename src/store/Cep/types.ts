@@ -6,8 +6,7 @@ interface CepInfosType {
   uf: string;
 }
 
-export interface MessageState {
-  message: string;
+export interface CepState {
   loading: boolean;
   cepInfo: null | CepInfosType;
 }

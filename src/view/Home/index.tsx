@@ -3,25 +3,19 @@ import { View, Text, Button } from 'react-native';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { setMessage, cepInfos } from '../../store/Message';
-import { ApplicationState } from '../../store/rootReducer/storeConfig';
+import { cepInfos } from '../../store/Cep';
+import { ApplicationState } from '../../store/reduxConfig/storeConfig';
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
-  const { message, cepInfo } = useSelector(
-    (state: ApplicationState) => state.message,
-  );
+  const { cepInfo } = useSelector((state: ApplicationState) => state.cep);
 
   const handlePress = () => {
-    dispatch(setMessage('Message from Component'));
     dispatch(cepInfos());
   };
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>{message}</Text>
-      <Button title="Set Message" onPress={handlePress} />
-
       <Text>dados do cep: {cepInfo?.bairro || 'n/d'}</Text>
       <Button title="get cep info" onPress={handlePress} />
     </View>

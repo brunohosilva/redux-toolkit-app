@@ -2,13 +2,13 @@ import { applyMiddleware, createStore, Store } from '@reduxjs/toolkit';
 import { persistStore, persistReducer } from 'redux-persist';
 import createSagaMiddleware from 'redux-saga';
 
-import { MessageState } from '../Message/types';
+import { CepState } from '../Cep/types';
 import rootSaga from '../rootSaga';
 import { persitorConfig } from './persistorConfig';
 import rootReducer from './rootReducer';
 
 export interface ApplicationState {
-  message: MessageState;
+  cep: CepState;
 }
 
 const sagaMiddleware = createSagaMiddleware();

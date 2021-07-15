@@ -1,20 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-import { MessageState } from './types';
+import { CepState } from './types';
 
-const initialState: MessageState = {
-  message: 'Messagem inicial',
+const initialState: CepState = {
   loading: false,
   cepInfo: null,
 };
 
 const messageSlice = createSlice({
-  name: 'message',
+  name: 'cep',
   initialState,
   reducers: {
-    setMessage(state = initialState, action: PayloadAction<string>) {
-      state.message = action.payload;
-    },
     cepInfos(state = initialState) {
       state.loading = true;
     },
@@ -24,5 +20,5 @@ const messageSlice = createSlice({
   },
 });
 
-export const { setMessage, cepInfos, setCepInfos } = messageSlice.actions;
+export const { cepInfos, setCepInfos } = messageSlice.actions;
 export default messageSlice.reducer;

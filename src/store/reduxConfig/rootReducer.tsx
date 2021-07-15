@@ -1,10 +1,10 @@
 import { combineReducers } from '@reduxjs/toolkit';
 
-import message from '../Message';
+import cep from '../Cep';
 import { ApplicationState } from './storeConfig';
 
 const combinedReducer = combineReducers<ApplicationState>({
-  message,
+  cep,
 });
 
 const rootReducer = (state: ApplicationState, action: any) => {
