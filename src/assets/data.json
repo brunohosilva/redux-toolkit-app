@@ -1,0 +1,44 @@
+{
+  "all": [
+    {
+
+      "text": "Temperatura",
+      "value": "#forecast:temperature"
+    },
+    {
+      "text": "Chuva",
+      "value": "#forecast:rain"
+    },
+    {
+      "text": "Vento",
+      "value": "#forecast:wind"
+    },
+    {
+      "text": "Umidade",
+      "value": "#forecast:humidity"
+    },
+    {
+      "text": "Pressão",
+      "value": "#forecast:pressure"
+    },
+    {
+      "text": "Satélite",
+      "value": "#weatherNow"
+    }
+  ],
+
+  "default": [
+    {
+      "text": "Temperatura",
+      "value": "#forecast:temperature"
+    },
+    {
+      "text": "Chuva",
+      "value": "#forecast:rain"
+    },
+    {
+      "text": "Vento",
+      "value": "#forecast:wind"
+    }
+  ]
+}
